@@ -1,0 +1,442 @@
+body {
+    font-family: 'Pompiere', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    overflow-x: hidden;
+}
+
+/* Card Container for Section 1 */
+.card-container {
+    display: flex;
+    flex-direction: column; /* Aligns the cards vertically */
+    gap: 20px; /* Adds space between the cards */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* max-width: 600px; */
+    /* Centers the cards horizontally with space on top */
+}
+
+/* Card Styles */
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center; /* Centers the card horizontally */
+    align-items: center; /* Aligns content vertically */
+   
+}
+
+/* Card Styling */
+.card {
+    height: 700px; /* Unified height for the card */
+    width: 500px; /* Unified width for the card */
+    background: #ca9851; /* Base background color */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 65px 20px;
+    text-align: center;
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column;
+    justify-content: center; /* Centers content inside */
+    align-items: center;
+    position: relative;
+}
+
+.product-container {
+    background: linear-gradient(to bottom, #b28654, #a6743b);
+}
+
+/* Card Title */
+.card h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Pompiere', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+/* Vertical Buttons */
+.vertical-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+    width: 55%; /* Adjust button container width */
+}
+
+.vertical-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #633A00;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.vertical-buttons button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Card Header */
+.card h1 {
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Pompiere', Arial, sans-serif;
+}
+
+/* Card Text */
+.card p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Shop Now Button */
+.shop-now {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #633A00;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.shop-now:hover {
+    background-color: #0056b3;
+}
+
+/* Card with Image Background */
+.card-with-bg {
+    background-size: cover; /* Makes the background image cover the entire card */
+    background-position: center;
+    width: 100%;
+    height: 450px; /* Adjust the height as needed */
+    border-radius: 10px;
+
+    color: white; /* Ensures text is readable */
+}
+
+/* Overlay for Content on Top of Image */
+.card-with-bg .overlay {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    background-color: #F2E3B6; /* Color overlay with transparency */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers the text vertically */
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px; /* Ensures space for the content */
+}
+
+/* Card Text and Button Inside Overlay */
+.card-with-bg h1, .card-with-bg p {
+    color: #633A00;
+}
+
+.card-with-bg .shop-now {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #633A00;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card-with-bg .shop-now:hover {
+    background-color: #0056b3;
+}
+
+/* Image Below the Button (if needed) */
+.card-with-bg .card-image {
+    margin-top: 20px; /* Adds space between the button and the image */
+    width: 100%; /* Adjust the image size to fit the card */
+    max-width: 200px; /* You can adjust the maximum width of the image */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the image */
+}
+
+/* Vertical Buttons inside Card */
+.vertical-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.vertical-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #633A00;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.vertical-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* New Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    /* background-color: #f4f4f4; */
+    margin: 20px 0;
+}
+
+.cart-section {
+    /* background-color: #e2e2e2; */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.125) 68.53%);
+    backdrop-filter: blur(24px);
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+section h2 {
+    color: #333;
+}
+
+/* Scrollable Page */
+main {
+    flex-grow: 1; /* Ensures the main content grows */
+}
+
+/* Section Headings */
+section h2 {
+    font-family: 'Pompiere', Arial, sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.slogan-text{
+     font-family: 'Pompiere', Arial, sans-serif;
+color: #ffffff;
+font-size: 80px;
+font-weight: 400;
+text-align: center;
+
+}
+
+.overlay-img {
+    padding-left: 0px !important;
+    padding-right: 12px !important;
+    position: absolute;
+    top: 20%;/* Adjust as needed */
+    height: 100%; 
+}
+
+.overlay-card {
+    margin-right: 0;
+    position: relative;
+    display: inline-block;
+    padding-right: 0 !important;
+}
+
+.overlay-container {
+    height: 520px;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust card container to be full-width on smaller screens */
+    .card-container {
+        width: 90%;
+    }
+
+    /* Stack cards on small screens */
+    .card-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+section {
+
+    padding: 20px;
+    background-color: #F2E3B6;   
+    
+}
+.cart-container {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center align the cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-direction: row;
+}
+.cart {
+    background-color: #F2E3B6; /* White background */
+    border: 1px solid  #F2E3B6; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    width: 300px; /* Fixed width for the cards */
+    text-align: center;
+}
+.cart h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+.cart p {
+    font-size: 1rem;
+    color: #555; /* Gray text color */
+}
+
+.cart-header{
+    font-family: Pompiere;
+font-size: 32px;
+font-weight: 400;
+line-height: 38.45px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #D98943;
+
+
+}
+
+.cart-text{
+    font-family: Pompiere;
+font-size: 80px;
+font-weight: 400;
+line-height: 96.13px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #F2E3B6;
+
+}
+
+.navigation-bar {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.125) 68.53%);
+      backdrop-filter: blur(24px);
+}
+.slogan-container{
+    padding-top:30px ;
+    padding-bottom:0px;
+}
+.footer-section{
+margin: 0px;
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 120px;
+padding-bottom: 50px;
+background-color: #D98943;
+text-align: left;
+color: #F2E3B6;
+} 
+
+.con-container{
+background: #633A00A3;
+backdrop-filter: blur(24px);    
+margin-top: 0px;
+padding-top: 30px;
+width: 1306px;
+height: 1036px;
+left: 78px;
+gap: 0px;
+opacity: 0px;
+
+
+}
+.ma-container{
+    
+width: 1196px;
+height: 667px;
+top: 279px;
+left: 123px;
+gap: 0px;
+opacity: 0px;
+background: #633A00A3;
+
+
+
+}
+
+.sub-container{
+width: 491px;
+height: 647px;
+top: 289px;
+left: 133px;
+gap: 0px;
+opacity: 0px;
+background: #F2E3B6;
+
+
+}
+.sub-container h4{
+width: 262px;
+height: 28px;
+top: 40px;
+left: 40px;
+gap: 0px;
+opacity: 0px;
+font-family:josefin Sans;
+font-size: 28px;
+font-weight: 600;
+line-height: 28px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #592411;
+
+
+}
+.sub-container h5{
+width: 278px;
+height: 18px;
+top: 88px;
+left: 40px;
+gap: 0px;
+opacity: 0px;
+font-family: josefin Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 18px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:  #A65424;
+;
+
+
+}
+
+.fo-main{
+width: 337px;
+height: 172px;
+top: 226px;
+left: 40px;
+gap: 0px;
+opacity: 0px;
+display: flex;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center align the cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-direction:column;
+
+}
+
+
+
