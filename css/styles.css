@@ -458,3 +458,57 @@ display: flex;
     background-color: #967742 !important;
 }
 
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar-brand {
+    flex: 1; /* Brand on the left */
+    text-align: left;
+   
+}
+
+.navbar-nav-center {
+    flex: 2; /* Links in the center */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav-right {
+    flex: 1; /* Links on the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    margin: 0 10px;
+}
+
+.nav-link {
+    margin: 0 10px;
+    position: relative; /* Allows positioning the underline */
+    transition: color 0.0s ease; /* Smooth color change */
+}
+
+.nav-link:hover {
+    color:#ffffff; /* Change link color on hover */
+}
+
+.nav-link::after {
+    content: ''; /* Empty content for the line */
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Position the line slightly below the text */
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Line color */
+    transition: width 0.0s ease; /* Smooth animation */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
