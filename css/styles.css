@@ -279,11 +279,16 @@ section {
     
 }
 .cart-container {
+    color: #825e28;
     display: flex;
     gap: 20px; /* Spacing between cards */
     justify-content: center; /* Center align the cards */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     flex-direction: row;
+}
+
+.cart h4{
+    color: #0e0d0d;
 }
 .cart {
     background-color: #F2E3B6; /* White background */
@@ -475,6 +480,8 @@ display: flex;
     flex: 2; /* Links in the center */
     display: flex;
     justify-content: center;
+   
+   
 }
 
 .navbar-nav-right {
@@ -511,4 +518,26 @@ display: flex;
 .nav-link:hover::after {
     width: 100%; /* Full width on hover */
 }
+
+.navbar-nav-right a {
+    display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer; 
+}
+
+.navbar-nav-right a:hover {
+    background-color: #0056b3;
+  }
+
+.row-gap{
+  display: grid;
+  grid-auto-flow: row; /* Arrange items in a row */
+  gap: 20px; /* Space between items */
+  justify-content: start; /* Align items to the start */
+  padding: 10px;
+}
+
+
 
