@@ -99,12 +99,24 @@ body {
     margin-bottom: 20px;
 }
 
+/* .shop{
+    
+    background-color: #633A00; 
+    color: white;
+    cursor: pointer;
+} 
+
+.shop:hover {
+    background-color: #0056b3;
+
+} */
+
 /* Shop Now Button */
 .shop-now {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #633A00;
+    background-color: #633A00; 
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -579,6 +591,7 @@ display: flex;
     padding: 10px;
     background-color: #D98943 ;
     border: none;
+    
     border-radius: 4px;
     cursor: pointer;
    }  
