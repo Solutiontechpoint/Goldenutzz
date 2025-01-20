@@ -539,5 +539,51 @@ display: flex;
   padding: 10px;
 }
 
-
-
+.card-type {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color:  #592411;
+    ;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-body h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#F2E3B6;
+  }
+  
+  .card-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+   input[type="email"] {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #F2E3B6;
+    
+  } 
+  
+.subcribe-btn{
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    background-color: #D98943 ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   }  
+  
+  /* button.subscribe-btn:hover {
+    background-color: #45a049;
+  } */
+   
