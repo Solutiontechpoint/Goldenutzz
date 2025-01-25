@@ -204,8 +204,9 @@ body {
 }
 
 .vertical-buttons button:hover {
-    background-color: #0056b3;
-}
+     background-color: #0056b3;
+   
+} 
 
 /* New Sections */
 section {
@@ -217,7 +218,7 @@ section {
 
 .cart-section {
     /* background-color: #e2e2e2; */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.125) 68.53%);
+    background : linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.125) 68.53%);
     backdrop-filter: blur(24px);
     margin-top: 0px;
     padding-top: 30px;
@@ -229,7 +230,7 @@ section h2 {
 
 /* Scrollable Page */
 main {
-    flex-grow: 1; /* Ensures the main content grows */
+     flex-grow: 1; /*Ensures the main content grows */
 }
 
 /* Section Headings */
@@ -248,6 +249,13 @@ text-align: center;
 
 }
 
+.bg-card{
+    background : linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.125) 68.53%);
+    backdrop-filter: blur(24px);
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
 .overlay-img {
     padding-left: 0px !important;
     padding-right: 12px !important;
@@ -258,10 +266,11 @@ text-align: center;
 }
 
 .overlay-card {
-    margin-right: 0;
+    margin-left:12px;
     position: relative;
     display: inline-block;
     padding-right: 0 !important;
+    width: 1309px !important;
 }
 
 .overlay-container {
@@ -554,26 +563,35 @@ display: flex;
 }
 
 .card-type {
-    width: 300px;
+    /* width: 600px;
+    height: 220px;
+    top: 188px;
+    left: 1000px;
+    gap: 0px; */
+    width: 450px;
+    border-radius: 10px ;
+    opacity: 0px;
     border: 1px solid #ccc;
-    border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color:  #592411;
-    ;
+    margin-left: 650px;
     font-family: Arial, sans-serif;
   }
   
   .card-body h3 {
-    text-align: center;
+    text-align: start;
     margin-bottom: 20px;
     color:#F2E3B6;
+    margin-left: 20px;
   }
   
   .card-cell {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 60px;
   }
   
    input[type="email"] {
@@ -606,3 +624,56 @@ display: flex;
     text-decoration: none !important;
     color: inherit !important;
   }
+
+  input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+    background-color: transparent; 
+    border-radius: 0 !important;/* Removes background color */
+    border: none !important; /* Removes all borders */
+    border-bottom: 2px solid #ccc !important; /* Adds bottom border only */
+    outline: none !important; /* Removes focus outline */
+    font-size: 16px; /* Adjust font size for better appearance */
+    padding: 5px; /* Adds padding for better usability */
+}
+input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+    border-bottom: 2px solid #000; /* Changes bottom border color on focus */
+}
+
+.subcribe-btn {
+    background-color: #D98943;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.subcribe-btn:hover {
+    background-color:  #D5a049;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+.popup button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color:  #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <main>
         <nav class="navbar navbar-expand-lg navbar-light navigation-bar">
@@ -48,7 +49,7 @@
     </div>
     <!-- First Card with Background Image -->
      <div class="row overlay-container">
-   <div class="col-md-7  overlay-card">
+   <div class="overlay-card">
     <div class=" row card-with-bg">
         <div class="overlay">
             <h1>"Pure,Premium,Perfect."</h1>
@@ -59,12 +60,12 @@
            <!-- <img style="height: 400px; width: 100%;"  src="./assets/images/nut2.png" alt=""> -->
         </div>
     </div>
-    <div class="row">
+    <div class="row";>
         <img class="overlay-img" src="./assets/images/nut2.png" alt="">
     </div>
 </div>
-<div class="col-md-5 map-area" style="background-color: white;"></div>
-</div>
+<!-- <div class="col-md-5 map-area" style="background-color: white;"></div>
+</div> -->
 </div>
 
         
@@ -84,7 +85,7 @@
                     <div class="cart-container column">
                     <div><i><i class="fa fa-truck"></i></i>Free shipping</div>
                     <div><i><i class="fa fa-gift"></i></i>Free gifts</div>
-                    <button class="shop-now">shop Now</button>
+                    <a href="addcart.html"><button class="shop-now">shop Now</button></a>
                 </div>
                 </div>
                 <div class="cart">
@@ -96,7 +97,7 @@
                     <div class="cart-container column">
                         <div><i><i class="fa fa-truck"></i></i>Free shipping</div>
                         <div><i><i class="fa fa-gift"></i></i>Free gifts</div>
-                        <button class="shop-now">shop now</button>
+                    <a href="addcart.html"><button class="shop-now">shop now</button></a>
                     </div>
                 </div>
                 <div class="cart">
@@ -108,14 +109,15 @@
                     <div class="cart-container column">
                         <div><i><i class="fa fa-truck"></i></i>Free shipping</div>
                         <div><i><i class="fa fa-gift"></i></i>Free gifts</div>
-                        <button class="shop-now">shop now</button>
+                        <a href="addcart.html"><button class="shop-now">shop now</button></a>
                     </div>
                 </div>
             </div>
         </section> 
 
 
-        <!-- Card with Buttons -->
+        <!-- section 3 Card with Buttons -->
+         <div class="bg-card">
         <div id="Products" class="card-container row">
             <div class="col-md-6 col-md-offset-3">
             <div class="card product-container col-md-6 col-md-offset-3 container">
@@ -130,10 +132,25 @@
             </div>
             </div>
         </div>
+    </div>
    <!-- Section 4 -->
          <section>
             <h2 style="color: #F2E3B6;">Loved by Thousands 4</h2>
             <p style="color: #D98943;">Customer Testimonials</p>
+            <!-- <div class="slider">
+                <div class="slides"> -->
+                  <!-- Each profile 
+                  <div class="slide">Profile 1</div>
+                  <div class="slide">Profile 2</div>
+                  <div class="slide">Profile 3</div>
+                  <div class="slide">Profile 4</div>
+                  <div class="slide">Profile 5</div>
+                </div>
+              </div>
+              <script src="script.js"></script> -->
+
+
+
         </section>
          <!-- Section 5 -->
         <section id="About Us" class="footer-section">
@@ -141,36 +158,73 @@
            <div class="row">
             <div class="col-md-3 row-gap">
                 <div>Reach us</div>
-                <div><i class="fa fa-phone"></i> +1012 3456 789</div>
+                <!-- <div><i class="fa fa-phone"></i> +1012 3456 789</div>
                 <div><i class="fa fa-envelope"></i> Email</div>
-                <div><i class="fa fa-map-marker" aria-hidden="true"></i> Address</div>
+                <div><i class="fa fa-map-marker" aria-hidden="true"></i> Address</div> -->
+                <div>Address:
+
+                    Box: 17115, 1st Floor,
+                   Office No. 2, Shahama Complex,
+                   Zone 55, Street 180, Building 45,
+                   Aziziya, Doha, QATAR</div>
             </div>
             <div class="col-md-2 row-gap">
-                <div>Company</div>
+                <!-- <div>Company</div> -->
+                <!-- <div>About</div> -->
+                <!-- <div><a href="contact.html">Contacts</a></div> -->
+                <!-- <div>Blogs</div> -->
+            </div>
+            <div class="col-md-2 row-gap">
                 <div>About</div>
-                <div><a href="contact.html">Contacts</a></div>
-                <div>Blogs</div>
-            </div>
-            <div class="col-md-2 row-gap">
-                <div>Legal</div>
-                <div>Privacy Policy</div>
-                <div>Terms & Services</div>
+                <!-- <div>Legal</div> -->
+               <a href="privacy.html"> <div>Privacy Policy</div></a>
+               <div><a href="contact.html">Contacts</a></div>
+                <!-- <div>Terms & Services</div>
                 <div>Terms of Use</div>
-                <div>Refund Policy</div>
+                <div>Refund Policy</div> -->
         
-            </div>
-            <div class="card-type">
+           </div>
+           <span>
+            <div class="card-type" >
            <div class="card-body">
             <h3>Join Our Newsletter</h3> 
            </div>
            <div class="card-cell">
-           <form action="submit_firm.php" method="post">
-            
-            <input type="email" id="email" name="email" placeholder="Your email address" required>
-            <button type="submit" class="subcribe-btn">Subscribe</button><br>
-            <label for="email" style="color: #F2E3B6;">* Will send you weekly updates for your better tool management.</label>
-           
-           </form>
+            <form id="subscription-form">
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+                <button type="submit" class="subcribe-btn">Subscribe</button><br>
+                <label for="email" style="color: #F2E3B6;">* Will send you weekly updates for your better tool management.</label>
+            </form>
+        
+            <div id="popup" class="popup">
+                <p>Thank you for subscribing!</p>
+                <button id="close-popup">Close</button>
+            </div>
+        
+            <script>
+                const form = document.getElementById('subscription-form');
+                const popup = document.getElementById('popup');
+                const closePopupButton = document.getElementById('close-popup');
+        
+                // Show the popup when the form is submitted
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent form submission
+                    popup.style.display = 'block'; // Show popup
+                });
+        
+                // Close the popup when the close button is clicked
+                closePopupButton.addEventListener('click', function () {
+                    popup.style.display = 'none';
+                });
+        
+                // Optional: Close the popup when clicking outside of it
+                window.addEventListener('click', function (event) {
+                    if (event.target === popup) {
+                        popup.style.display = 'none';
+                    }
+                });
+            </script>
+            </span>
            </div>
            </div>
            </div>
