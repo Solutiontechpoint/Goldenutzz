@@ -49,7 +49,7 @@ body{
     padding: 15px;
     margin:10px 0;
     color: #f2e3b6;
-    background-color: transparent;
+    background-color: #d98943;
 
 }
 h1{
@@ -80,6 +80,35 @@ h3{
     margin: 18px 0;
     font-size: medium;
 }
+
+
+        input[type="email"],
+        input[type="tel"] {
+    background-color: transparent; 
+    border-radius: 0 !important;/* Removes background color */
+    border: none !important; /* Removes all borders */
+    border-bottom: 2px solid #ccc !important; /* Adds bottom border only */
+    outline: none !important; /* Removes focus outline */
+    font-size: 16px; /* Adjust font size for better appearance */
+    padding: 5px; /* Adds padding for better usability */
+}
+
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+    border-bottom: 2px solid #000; /* Changes bottom border color on focus */
+}
+
+.buy-now-btn {
+    background-color: #D98943;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.buy-now-btn:hover {
+    background-color:  #D5a049;
+    }
         
     </style>
 </head>
@@ -87,7 +116,7 @@ h3{
     <nav class="navbar navbar-expand-lg navbar-light navigation-bar">
         <div class="container-fluid">
             <!-- Brand (Left) -->
-            <a class="navbar-brand" href="index.html" style="color: #ffffff;"><img src="./assets/images/logo.png" class="logo" alt=""></a>
+            <a class="navbar-brand" href="index.html" style="color: #ffffff;"><img src="./assets/images/logo (1).png" class="logo" alt=""></a>
 
 
             <!-- Toggle Button (for small screens) -->
@@ -109,11 +138,12 @@ h3{
                 <div class="navbar-nav navbar-nav-right">
                     <!-- <a class="nav-link" href="#">Login</a>
                     <a class="nav-link" href="#">Signup</a> -->
-                    <a class="nav-link  nav-font"><i class="fa fa-shopping-cart"></i></a>
+                    <!-- <a class="nav-link  nav-font"><i class="fa fa-shopping-cart"></i></a> -->
                 </div>
             </div>
         </div>
     </nav>
+    
     <div class="container add-cart-container">
         <div class="row"><div class="col-md-7"></div>
             <div class="col-md-4">
@@ -129,12 +159,46 @@ h3{
                 Thiết kế Bauhaus tối giản của Weimar Otto được Curnon thể hiện trên nền của sự kết hợp màu sắc tinh tế và hiện đại.
                 Cặp dây da màu Sand cùng chi tiết kim xanh chính là điểm nhấn giúp bạn kết hợp hoàn hảo với bất kỳ bộ trang phục nào.
             </p>
-            <div>
-                <button class="addcart-btn"><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</button>        
+            <form id="buynow-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <label  class="msg" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>   
+                <div class="col-md-6">
+                    <label  class="msg" for="contact">Phone Number</label>
+                    <input type="tel" id="contact" name="contact" placeholder="+1 012 3456 789" required> 
+                </div>
+                
+                <!-- <button class="addcart-btn"><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</button>         -->
+                <button type="submit" class="buy-now-btn">Buy Now</button>
             </div>
-            <div>
-                <button class="buy-now-btn">Buy Now</button>
+        </form>
+            <div id="popup" class="popup">
+                <p>Your order has been placed successfully. Our executive will contact you soon.</p>
+                <button id="close-popup" onclick="onClose()">Close</button>
             </div>
+            <script>
+                const form = document.getElementById('buynow-form');
+                const popup = document.getElementById('popup');
+               
+                // Show the popup when the form is submitted
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent form submission
+                    popup.style.display = 'block'; // Show popup
+                });
+
+                function onClose(){
+                    popup.style.display = 'none'; 
+                }
+            
+                // Optional: Close the popup when clicking outside of it
+                window.addEventListener('click', function (event) {
+                    if (event.target === popup) {
+                        popup.style.display = 'none';
+                    }
+                });
+            </script>
         </div>
     </div>
 </div>
@@ -142,3 +206,5 @@ h3{
 </div>
 </body>
 </html>
+
+

@@ -24,6 +24,8 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+
+    
         .form-section button {
             background-color:#996633;
             color: #fff;
@@ -34,9 +36,7 @@
             width: 240px;
             margin-left: 325px; 
             
-           
-           
-        }
+      }
         .form-section button:hover {
             background-color: #a4764d;
         }
@@ -114,14 +114,24 @@ input[type="text"]:focus,
         input[type="tel"]:focus {
     border-bottom: 2px solid #000; /* Changes bottom border color on focus */
 }
+
+.msg{
+    color:wheat;
+}
+
+.txt{
+    background-color: #faa640f8;
+    margin-top: 10px;
+}
         
+
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navigation-bar">
         <div class="container-fluid">
             <!-- Brand (Left) -->
-            <a class="navbar-brand" href="index.html" style="color: #ffffff;"><img src="./assets/images/logo.png" class="logo" alt=""></a>
+            <a class="navbar-brand" href="index.html" style="color: #ffffff;"><img src="./assets/images/logo (1).png" class="logo" alt=""></a>
 
 
             <!-- Toggle Button (for small screens) -->
@@ -143,7 +153,7 @@ input[type="text"]:focus,
                 <div class="navbar-nav navbar-nav-right">
                     <!-- <a class="nav-link" href="#">Login</a>
                     <a class="nav-link" href="#">Signup</a> -->
-                    <a class="nav-link  nav-font"><i class="fa fa-shopping-cart"></i></a>
+                    <!-- <a class="nav-link  nav-font"><i class="fa fa-shopping-cart"></i></a> -->
                 </div>
             </div>
         </div>
@@ -162,9 +172,13 @@ input[type="text"]:focus,
            
             <div class="row">
                 <div class="foot fo-main">
-                        <div><i class="fa fa-phone"></i> +1012 3456 789</div>
-                        <div><i class="fa fa-envelope"></i> Email</div>
-                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Address</div>
+                        <div class="contact-items"><i class="fa fa-phone"></i>&ensp; +1012 3456 789</div>
+                        <div class="contact-items"><i class="fa fa-envelope"></i>&ensp; Email</div>
+                        <div class="contact-items address-container"><div><i class="fa fa-map-marker" aria-hidden="true"></i>&ensp;&ensp; </div>
+                            <div>Box: 17115, 1st Floor, <br/>
+                           Office No. 2, Shahama Complex,<br/>
+                           Zone 55, Street 180, Building 45,<br/>
+                           Aziziya, Doha, QATAR</div></div>
                         </div>
                     </div>
 
@@ -183,22 +197,22 @@ input[type="text"]:focus,
                 <form>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="firstName">First Name</label>
+                            <label class="msg" for="firstName">First Name</label>
                             <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
                         </div>
                         <div class="col-md-6">
-                            <label for="lastName">Last Name</label>
+                            <label  class="msg" for="lastName">Last Name</label>
                             <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="email">Email</label>
+                            <label  class="msg" for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email">
                         </div>
                         <div class="col-md-6">
-                            <label for="contact">Phone Number</label>
+                            <label  class="msg" for="contact">Phone Number</label>
                             <input type="tel" id="contact" name="contact" placeholder="+1 012 3456 789">
                         </div>
                     </div>
@@ -218,33 +232,33 @@ input[type="text"]:focus,
                         </div> 
                     </div> -->
 
-                    <label for="subject">Select a Subject:</label><br><br>
+                    <label  class="msg" for="subject">Select a Subject:</label><br><br>
                     <div class="radio-group">
                         <div class="radio-item">
                             <input type="radio" id="general" name="subject" value="general">
                             <label class="custom-radio" for="general"></label>
-                            <label for="general">General Inquiry</label>
+                            <label class="msg" for="general">General Inquiry</label>
                         </div>
                         <div class="radio-item">
                             <input type="radio" id="support" name="subject" value="support">
                             <label class="custom-radio" for="support"></label>
-                            <label for="support">Support</label>
+                            <label class="msg" for="support">Support</label>
                         </div>
                         <div class="radio-item">
                             <input type="radio" id="feedback" name="subject" value="feedback">
                             <label class="custom-radio" for="feedback"></label>
-                            <label for="feedback">Feedback</label>
+                            <label class="msg" for="feedback">Feedback</label>
                         </div>
                         <div class="radio-item">
                             <input type="radio" id="queries" name="subject" value="queries">
                             <label class="custom-radio" for="queries"></label>
-                            <label for="queries">Queries</label>
+                            <label class="msg" for="queries">Queries</label>
                         </div>
                     </div>
 
                     
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+                    <!-- <label for="message">Message</label> -->
+                    <textarea id="message" class="txt" name="message" rows="5" placeholder="Write your message..."></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>    
