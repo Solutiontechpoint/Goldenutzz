@@ -260,7 +260,7 @@
             </form>
         
             <div id="popup" class="popup">
-                <p>Thank you for subscribing!</p>
+                <p id="popup-message"></p>
                 <button id="close-popup">Close</button>
             </div>
         
@@ -268,12 +268,37 @@
                 const form = document.getElementById('subscription-form');
                 const popup = document.getElementById('popup');
                 const closePopupButton = document.getElementById('close-popup');
+                const popupMessage = document.getElementById('popup-message');
         
                 // Show the popup when the form is submitted
-                form.addEventListener('submit', function (event) {
+                form.addEventListener('submit',async function (event) {
                     event.preventDefault(); // Prevent form submission
-                    popup.style.display = 'block'; // Show popup
-                });
+                    event.preventDefault(); // Prevent the default form submission
+
+try {
+    // Collect form data
+    const formData = new FormData(form);
+
+    // Make a POST request to submit the form
+    const response = await fetch('/forms/newsletter.php', {
+        method: 'POST',
+        body: formData,
+    });
+
+    if (!response.ok) {
+        throw new Error(`Error: ${response.status} ${response.statusText}`);
+    }
+
+    const result = await response.json(); // Assume the response is JSON
+    popupMessage.textContent = 'Thank you for subscribing!';
+    popup.style.display = 'block'; // Show success popup
+} catch (error) {
+    console.error('Form submission failed:', error);
+    popupMessage.textContent = 'Something went wrong, please try again later.';
+    popup.style.display = 'block'; // Show error popup
+}
+});
+
         
                 // Close the popup when the close button is clicked
                 closePopupButton.addEventListener('click', function () {

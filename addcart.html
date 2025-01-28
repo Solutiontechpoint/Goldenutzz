@@ -175,7 +175,7 @@ h3{
             </div>
         </form>
             <div id="popup" class="popup">
-                <p id="popup-message">Your order has been placed successfully. Our executive will contact you soon.</p>
+                <p id="popup-message"></p>
                 <button id="close-popup" onclick="onClose()">Close</button>
             </div>
             <script>
@@ -183,6 +183,7 @@ h3{
                 const popup = document.getElementById('popup');
                 const popupMessage = document.getElementById('popup-message');
                
+                // Email functionality html code
                     form.addEventListener('submit', async function (event) {
                     event.preventDefault(); // Prevent the default form submission
 
