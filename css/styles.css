@@ -14,6 +14,12 @@ body {
     overflow-x: hidden;
 }
 
+.logo{
+    height:50px ;
+    width:50px ;
+
+  }
+
 /* Card Container for Section 1 */
 .card-container {
     display: flex;
@@ -81,9 +87,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.vertical-buttons button:hover {
-    background-color: #0056b3;
-}
+
 
 
 /* Card Header */
@@ -203,10 +207,6 @@ body {
     font-size: 16px;
 }
 
-.vertical-buttons button:hover {
-     background-color: #0056b3;
-   
-} 
 
 /* New Sections */
 section {
@@ -298,7 +298,7 @@ text-align: center;
 section {
 
     padding: 20px;
-    background-color: #F2E3B6;   
+    /* background-color: #F2E3B6;    */
     
 }
 .cart-container {
@@ -503,8 +503,12 @@ display: flex;
     flex: 2; /* Links in the center */
     display: flex;
     justify-content: center;
+    
    
-   
+}
+
+.nav-font{
+    color: #ffffff !important;
 }
 
 .navbar-nav-right {
@@ -575,7 +579,6 @@ display: flex;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color:  #592411;
-    margin-left: 650px;
     font-family: Arial, sans-serif;
   }
   
@@ -594,16 +597,7 @@ display: flex;
     margin-right: 60px;
   }
   
-   input[type="email"] {
-    width: 200px;
-    height: 50px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background-color: #F2E3B6;
-    
-  } 
+  
   
 .subcribe-btn{
     width: 100px;
@@ -624,23 +618,6 @@ display: flex;
     text-decoration: none !important;
     color: inherit !important;
   }
-
-  input[type="text"],
-        input[type="email"],
-        input[type="tel"] {
-    background-color: transparent; 
-    border-radius: 0 !important;/* Removes background color */
-    border: none !important; /* Removes all borders */
-    border-bottom: 2px solid #ccc !important; /* Adds bottom border only */
-    outline: none !important; /* Removes focus outline */
-    font-size: 16px; /* Adjust font size for better appearance */
-    padding: 5px; /* Adds padding for better usability */
-}
-input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus {
-    border-bottom: 2px solid #000; /* Changes bottom border color on focus */
-}
 
 .subcribe-btn {
     background-color: #D98943;
@@ -675,5 +652,92 @@ input[type="text"]:focus,
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.swiper-wrapper{
+    margin: 100px !important;
+}
+
+.swiper {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background: rgba(96, 64, 16, 0.9);
+    padding: 150px 10px 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    /* max-width: 300px; */
+    width: 100% !important;
+    position: relative;
+    height: 328px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    /* margin: 5px; */
+}
+
+.swiper-slide img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-bg{
+    background-color:#633A00A3 ;
+    height: 600px;
+}
+
+.testimonial-container {
+    position: relative;
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.4); */
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin: auto;
+    /* backdrop-filter: blur(5px); */
+}
+
+.testimonial-box {
+    background: linear-gradient(135deg, #c56e33, #b95b21);
+    padding: 120px;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.testimonial-box::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #b95b21;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
