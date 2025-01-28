@@ -17,6 +17,7 @@ body {
 .logo{
     height:50px ;
     width:50px ;
+    
 
   }
 
@@ -630,17 +631,8 @@ opacity: 0px;
     color: inherit !important;
   }
 
-.subcribe-btn {
-    background-color: #D98943;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.subcribe-btn:hover {
-    background-color:  #D5a049;
-}
+
+
 .popup {
     display: none;
     position: fixed;
