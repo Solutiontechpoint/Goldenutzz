@@ -159,7 +159,7 @@ h3{
                 Thiết kế Bauhaus tối giản của Weimar Otto được Curnon thể hiện trên nền của sự kết hợp màu sắc tinh tế và hiện đại.
                 Cặp dây da màu Sand cùng chi tiết kim xanh chính là điểm nhấn giúp bạn kết hợp hoàn hảo với bất kỳ bộ trang phục nào.
             </p>
-            <form id="buynow-form">
+            <form id="buynow-form"  action="/forms/buynow.php" method="POST">
             <div class="row">
                 <div class="col-md-6">
                     <label  class="msg" for="email">Email</label>
@@ -169,23 +169,45 @@ h3{
                     <label  class="msg" for="contact">Phone Number</label>
                     <input type="tel" id="contact" name="contact" placeholder="+1 012 3456 789" required> 
                 </div>
-                
+                <input type="text" name="productname" value="WEIMAR - 40MM" style="display: none">
                 <!-- <button class="addcart-btn"><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</button>         -->
                 <button type="submit" class="buy-now-btn">Buy Now</button>
             </div>
         </form>
             <div id="popup" class="popup">
-                <p>Your order has been placed successfully. Our executive will contact you soon.</p>
+                <p id="popup-message">Your order has been placed successfully. Our executive will contact you soon.</p>
                 <button id="close-popup" onclick="onClose()">Close</button>
             </div>
             <script>
                 const form = document.getElementById('buynow-form');
                 const popup = document.getElementById('popup');
+                const popupMessage = document.getElementById('popup-message');
                
-                // Show the popup when the form is submitted
-                form.addEventListener('submit', function (event) {
-                    event.preventDefault(); // Prevent form submission
-                    popup.style.display = 'block'; // Show popup
+                    form.addEventListener('submit', async function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    try {
+                        // Collect form data
+                        const formData = new FormData(form);
+
+                        // Make a POST request to submit the form
+                        const response = await fetch('/forms/buynow.php', {
+                            method: 'POST',
+                            body: formData,
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`Error: ${response.status} ${response.statusText}`);
+                        }
+
+                        const result = await response.json(); // Assume the response is JSON
+                        popupMessage.textContent = 'Your order has been placed successfully. Our executive will contact you soon.';
+                        popup.style.display = 'block'; // Show success popup
+                    } catch (error) {
+                        console.error('Form submission failed:', error);
+                        popupMessage.textContent = 'Something went wrong, please try again later.';
+                        popup.style.display = 'block'; // Show error popup
+                    }
                 });
 
                 function onClose(){
