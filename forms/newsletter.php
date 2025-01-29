@@ -2,7 +2,7 @@
 
 //Change this portion accrding to requirement
 
-  $receiving_email_address = 'contact@solutiontechservices.com';
+  $receiving_email_address = 'sales@masterheattechnology.com';
 
   $subject = 'Someone has subscribed newsletter';
   $message = 'Someone has subscribed newsletter - '.
