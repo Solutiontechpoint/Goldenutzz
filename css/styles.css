@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column; 
     justify-content: flex-start; 
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .logo{
@@ -283,11 +283,20 @@ text-align: center;
 @media (max-width: 768px) {
     .footer-section{
         margin: 0px !important;
-        padding: 0px !important;
+        padding: 0 0 20px 0 !important;
+        margin-bottom: 250px !important;
         } 
 
         .about-footer{
             padding: 30px 100px !important;
+        }
+
+        .card-type {
+            width: 90% !important;
+            margin: auto;
+        }
+        .msg {
+            width: 40% !important;
         }
 }
 section {
@@ -376,7 +385,7 @@ backdrop-filter: blur(24px);
 margin-top: 0px;
 padding-top: 30px;
 width: 1306px;
-height: 1036px;
+padding-bottom: 30px;
 left: 78px;
 gap: 0px;
 opacity: 0px;

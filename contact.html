@@ -136,8 +136,25 @@ input[type="tel"]:focus {
     /* height: 50px; */
     /* width: 50px; */
 }
+.contact-inner-container {
+    text-align: center; 
+    margin-top: 20px; 
+    /* padding: 0 50px; */
+}
+@media (max-width: 768px) {
+     .ma-container{
+        width: 100% !important;
+        height: fit-content !important;
+     }
+     .contact-inner-container {
+    padding: 5px !important;
+}
 
-@media screen and (max-width: 768px) {
+.sub-container {
+    height: fit-content;
+    gap: 20px;
+}
+
     .contact-container {
         padding: 20px;
         max-width: 95%;
@@ -156,6 +173,7 @@ input[type="tel"]:focus {
 
 /* Mobile Screens (480px and below) */
 @media screen and (max-width: 480px) {
+
     .contact-container {
         padding: 15px;
     }
@@ -226,7 +244,7 @@ input[type="tel"]:focus {
         <div class="contact con-container container">
         <h1 style="text-align: center; margin-top: 50px; color: #F2E3B6;">Contact Us</h1>
         <p style="text-align: center;color:#F2E3B6;">Any question or remarks? Just write us a message!</p>
-        <div style="text-align: center; margin-top: 20px; padding: 0 50px;">
+        <div class="contact-inner-container">
         <div class="main ma-container row">
         <div class="main sub-container col-md-6">
             <div>
