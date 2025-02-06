@@ -2,7 +2,7 @@
 
 //Change this portion accrding to requirement
 
-  $receiving_email_address = 'contact@solutiontechservices.com';
+  $receiving_email_address = 'sales@masterheattechnology.com';
 
   $subject = 'Someone has intrest in your product';
   $message = 'Someone has intrest in your product - '.$_POST['productname'] . 
