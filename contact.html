@@ -10,118 +10,182 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .contact-container {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 50px;
-            backdrop-filter: blur(10px);
-        }
-        .form-section input, .form-section select, .form-section textarea {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+        .contact-container { 
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 50px auto; /* Centers the container */
+    backdrop-filter: blur(10px);
+    max-width: 90%; /* Makes it responsive */
+}
 
-    
-        .form-section button {
-            background-color:#996633;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 240px;
-            margin-left: 325px; 
-            
-      }
-        .form-section button:hover {
-            background-color: #a4764d;
-        }
-        .radio-group {
-            display: flex; /* Flexbox layout for alignment */
-            gap: 10px; /* Space between each radio button and label */
-            justify-content: space-around;
-            align-items: center;
-        }
+/* Input Fields */
+.form-section input, 
+.form-section select, 
+.form-section textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-        .radio-item {
-            display: flex; /* Flexbox for radio and label alignment */
-            justify-content: start;
-            align-items: center; /* Vertically centers label and radio button */
-        }
+/* Button */
+.form-section button {
+    background-color: #996633;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Makes button full width on smaller screens */
+    max-width: 240px;
+    display: block;
+    margin: 20px auto; /* Centers button */
+}
 
-        .radio-item input {
-            margin-right: 5px; /* Adds spacing between the radio button and label */
-        }
-        label {
-    white-space: nowrap !important; /* Prevent text from wrapping */
+.form-section button:hover {
+    background-color: #a4764d;
+}
+
+/* Radio Button Group */
+.radio-group {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+
+.radio-item input {
+    margin-right: 5px;
+}
+
+label {
+    white-space: nowrap;
 }
 
 input[type="radio"] {
-            display: none;
-        }
+    display: none;
+}
 
-        /* Custom tick styling */
-        .custom-radio {
-            display: inline-block;
-            position: relative;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            background-color: wheat;
-            border-radius: 20px;
-        }
+.custom-radio {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: wheat;
+    border-radius: 20px;
+}
 
-        /* Tick (checked) state */
-        .custom-radio:after {
-            content: ''; /* Empty by default */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-size: 20px;
-            color: #6f4811; /* Tick color */
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.3s ease-in-out;
-        }
+.custom-radio:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: #6f4811;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+}
 
-        /* Show the tick when checked */
-        input[type="radio"]:checked + .custom-radio:after {
-            content: '✓'; /* Tick icon appears when checked */
-            transform: translate(-50%, -50%) scale(1);
-        }
+input[type="radio"]:checked + .custom-radio:after {
+    content: '✓';
+    transform: translate(-50%, -50%) scale(1);
+}
 
-        .radio-item label {
-            margin-left: 10px; /* Space between the tick and text */
-            cursor: pointer;
-        }
+.radio-item label {
+    margin-left: 10px;
+    cursor: pointer;
+}
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"] {
+/* Underline Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
     background-color: transparent; 
-    border-radius: 0 !important;/* Removes background color */
-    border: none !important; /* Removes all borders */
-    border-bottom: 2px solid #ccc !important; /* Adds bottom border only */
-    outline: none !important; /* Removes focus outline */
-    font-size: 16px; /* Adjust font size for better appearance */
-    padding: 5px; /* Adds padding for better usability */
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
 }
+
 input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus {
-    border-bottom: 2px solid #000; /* Changes bottom border color on focus */
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-bottom: 2px solid #000;
 }
 
-.msg{
-    color:wheat;
+/* Message Section */
+.msg {
+    color: wheat;
 }
 
-.txt{
+.txt {
     background-color: #faa640f8;
     margin-top: 10px;
+    /* height: 50px; */
+    /* width: 50px; */
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons */
+        align-items: flex-start;
+    }
+
+    .form-section button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Screens (480px and below) */
+@media screen and (max-width: 480px) {
+    .contact-container {
+        padding: 15px;
+    }
+
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-section button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .custom-radio {
+        width: 20px;
+        height: 20px;
+    }
+
+    .custom-radio:after {
+        font-size: 16px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
 }
         
 

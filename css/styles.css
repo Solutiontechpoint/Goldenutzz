@@ -281,20 +281,14 @@ text-align: center;
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Adjust card container to be full-width on smaller screens */
-    .card-container {
-        width: 90%;
-    }
+    .footer-section{
+        margin: 0px !important;
+        padding: 0px !important;
+        } 
 
-    /* Stack cards on small screens */
-    .card-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .card {
-        width: 100%;
-    }
+        .about-footer{
+            padding: 30px 100px !important;
+        }
 }
 section {
 
