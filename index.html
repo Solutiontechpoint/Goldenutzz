@@ -26,6 +26,25 @@
     
   } 
 
+  .mobile-slider{
+    display: none !important;
+}
+
+.desktop-slider{
+    display: block !important;
+}
+
+  @media screen and (max-width: 768px) {
+    .desktop-slider{
+        display:none !important;
+
+    }
+    .mobile-slider{
+        display: block !important;
+    }
+}
+
+
 
     </style>
     <main>
@@ -152,8 +171,8 @@
         </div>
     </div>
    <!-- Section 4 -->
-         <!-- <section class="slider-bg">
-            <h2 style="color: #F2E3B6;">Loved by Thousands 4</h2>
+         <section class="slider-bg desktop-slider">
+            <h2 style="color: #F2E3B6;">Loved by Thousands</h2>
             <p style="color: #D98943;">Customer Testimonials</p>
            
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -218,8 +237,79 @@
               
     
 
-        </section> -->
-         <!-- Section 5 -->
+        </section>
+        <section class="slider-bg mobile-slider">
+            <div class="container text-center">
+                <h2 style="color: #F2E3B6;">Loved by Thousands</h2>
+                <p style="color: #D98943;">Customer Testimonials</p>
+            </div>
+        
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <!-- First Slide -->
+                 
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                <div class="col-10 offset-1">
+                                    <div class="swiper-slide text-center p-3">
+                                        <img src="https://randomuser.me/api/portraits/women/1.jpg" class="rounded-circle img-fluid" alt="User">
+                                        <h4 class="mt-100">Hannah Schmitt</h4>
+                                        <p class="testimonial-content">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <div class="col-10 offset-1">
+                                    <div class="swiper-slide text-center p-3">
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" class="rounded-circle img-fluid" alt="User">
+                                        <h4 class="mt-100">Sarah Johnson</h4>
+                                        <p class="testimonial-content">"Suspendisse sed magna eget nibh in turpis."</p>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                <div class="col-10 offset-1">
+                                    <div class="swiper-slide text-center p-3">
+                                        <img src="https://randomuser.me/api/portraits/women/3.jpg" class="rounded-circle img-fluid" alt="User">
+                                        <h4 class="mt-100">Emily Davis</h4>
+                                        <p class="testimonial-content">"Facilisis venenatis felis id augue cursus pellentesque."</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                    <!-- Second Slide -->
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-10 text-center">
+                                    <div class="testimonial-box p-4">
+                                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu rhoncus urna facilisis quisque orci lectus."</p>
+                                    </div>
+                                    <div class="profile mt-3">
+                                        <img src="https://randomuser.me/api/portraits/women/4.jpg" class="rounded-circle img-fluid" alt="Profile">
+                                        <h4>Olivia Brown</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <!-- Navigation Buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        
+         <!-- Section 5-->
         <section id="AboutUs" class="footer-section">
            <hr class="footer-line">
            <div class="row">
